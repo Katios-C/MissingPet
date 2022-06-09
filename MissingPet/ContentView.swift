@@ -1,9 +1,4 @@
-//
-//  ContentView.swift
-//  MissingPet
-//
-//  Created by Екатерина Чернова on 09.06.2022.
-//
+
 
 import SwiftUI
 
