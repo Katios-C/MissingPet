@@ -4,19 +4,19 @@ import SwiftUI
 
 struct LoginWindowView: View {
     @State var username: String = ""
-    @State var isReg = false
+    @State var  pathword: String = ""
+    
     
     var body: some View {
         VStack{
             HStack(){
                 Text("Вход")
-                    .font(Font.custom("Mulish-Regular", size: 18))
-                    .padding()
-                    .padding(.horizontal, 15)
+                    .font(Font.custom("Poppins-Regular", size: 18))
+                    .padding(.horizontal, UIScreen.main.bounds.size.width / 10)
+              
                 Text("Регистрация")
-                    .font(Font.custom("Mulish-Regular", size: 18))
-                    .padding()
-                    .padding(.horizontal, 15)
+                    .font(Font.custom("Poppins-Regular", size: 18))
+                    .padding(.horizontal, UIScreen.main.bounds.size.width / 10)
             }
       
             ZStack{
@@ -29,19 +29,19 @@ struct LoginWindowView: View {
             }
             
         
+            VStack{
+                TextFieldLogin(title: "Email", userName: username)
+                TextFieldLogin(title: "Пароль", userName: pathword)
+            }
+            .padding(.vertical)
             
-        TextField("Email", text: $username)
-                     .padding()
-                     .background(lightGreyColor)
-                     .cornerRadius(5.0)
-                     .padding(5)
-                     
-        
-        TextField("Пароль", text: $username)
-                     .padding()
-                     .background(lightGreyColor)
-                     .cornerRadius(5.0)
-                     .padding(5)
+            Image("fullButton")
+                .padding()
+            
+            Text("Забыли пароль?")
+                .font(Font.custom("Poppins-Regular", size: 18))
+                .padding(.vertical, UIScreen.main.bounds.size.width / 12)
+           
     }
         .padding()
 }
