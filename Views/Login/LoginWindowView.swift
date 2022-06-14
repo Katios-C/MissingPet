@@ -1,5 +1,3 @@
-
-
 import SwiftUI
 
 struct LoginWindowView: View {
@@ -10,41 +8,48 @@ struct LoginWindowView: View {
     var body: some View {
         VStack{
             HStack(){
-                Text("Вход")
-                    .font(Font.custom("Poppins-Regular", size: 18))
+                Text(loginTitle)
+                    .font(mulishBlackFont)
                     .padding(.horizontal, UIScreen.main.bounds.size.width / 10)
-              
-                Text("Регистрация")
-                    .font(Font.custom("Poppins-Regular", size: 18))
+                
+                Text(regestrationTitle)
+                    .font(mulishBlackFont)
                     .padding(.horizontal, UIScreen.main.bounds.size.width / 10)
             }
-      
+            
             ZStack{
-            Image("Vector")
+                Image(vector)
                 HStack{
-        
-            Image("Active_indicator")
-                   Spacer()
+                    
+                    Image(activeIndicator)
+                    Spacer()
                 }
             }
             
-        
+            
             VStack{
-                TextFieldLogin(title: "Email", userName: username)
-                TextFieldLogin(title: "Пароль", userName: pathword)
+                TextFieldLogin(title: emailTitle, userName: username)
+                    .font(mulishFont)
+                    .colorScheme(.light)
+                
+                
+                TextFieldLogin(title: passwordTitle, userName: pathword)
+                    .font(mulishFont)
+                    .colorScheme(.light)
+                
             }
             .padding(.vertical)
             
-            Image("fullButton")
+            Image(fullButtonTitle)
                 .padding()
             
-            Text("Забыли пароль?")
-                .font(Font.custom("Poppins-Regular", size: 18))
+            Text(forgetPasswordTitle)
+                .font(mulishRusFont)
                 .padding(.vertical, UIScreen.main.bounds.size.width / 12)
-           
-    }
+            
+        }
         .padding()
-}
+    }
 }
 struct LoginWindowView_Previews: PreviewProvider {
     static var previews: some View {

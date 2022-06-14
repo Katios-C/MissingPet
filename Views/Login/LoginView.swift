@@ -8,7 +8,7 @@ struct LoginView: View {
             LoginWindowView()
                 .padding(.vertical)
             Spacer()
-            InLaterView()
+            LoginLaterView()
                 .padding(.bottom, UIScreen.main.bounds.size.width / 10)
         }
         .padding()
