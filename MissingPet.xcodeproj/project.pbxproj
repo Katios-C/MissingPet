@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		959575CB285849A10057FFFF /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95D252842852FD23000FE477 /* Poppins-Regular.ttf */; };
 		959575CD28584B810057FFFF /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95D2527D2851F252000FE477 /* Mulish-Regular.ttf */; };
 		959575CF285895C90057FFFF /* Mulish-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 959575CE285895C20057FFFF /* Mulish-Black.ttf */; };
 		95D252672851DF15000FE477 /* MissingPetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D252662851DF15000FE477 /* MissingPetApp.swift */; };
@@ -22,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		955745942859A03900A51D18 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		959575CE285895C20057FFFF /* Mulish-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Black.ttf"; sourceTree = "<group>"; };
 		959575D0285896450057FFFF /* Mulish-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Bold.ttf"; sourceTree = "<group>"; };
 		95D252632851DF15000FE477 /* MissingPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MissingPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,7 +35,6 @@
 		95D2527D2851F252000FE477 /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mulish-Regular.ttf"; path = "../../Downloads/Mulish/static/Mulish-Regular.ttf"; sourceTree = "<group>"; };
 		95D2527E2851F289000FE477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		95D252812852F7BD000FE477 /* LoginLaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLaterView.swift; sourceTree = "<group>"; };
-		95D252842852FD23000FE477 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../../Downloads/Mulish-2/Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		95D25285285307BB000FE477 /* TextFieldLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldLogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,7 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				95D2527D2851F252000FE477 /* Mulish-Regular.ttf */,
-				95D252842852FD23000FE477 /* Poppins-Regular.ttf */,
+				955745942859A03900A51D18 /* Poppins-Regular.ttf */,
 				959575CE285895C20057FFFF /* Mulish-Black.ttf */,
 				959575D0285896450057FFFF /* Mulish-Bold.ttf */,
 				95D252742851E4D7000FE477 /* Views */,
@@ -181,7 +180,6 @@
 				959575CD28584B810057FFFF /* Mulish-Regular.ttf in Resources */,
 				959575CF285895C90057FFFF /* Mulish-Black.ttf in Resources */,
 				95D2526B2851DF16000FE477 /* Assets.xcassets in Resources */,
-				959575CB285849A10057FFFF /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
