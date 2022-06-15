@@ -10,11 +10,11 @@ struct LoginWindowView: View {
             HStack(){
                 Text(loginTitle)
                     .font(mulishBlackFont)
-                    .padding(.horizontal, UIScreen.main.bounds.size.width / 10)
+                    .padding(.horizontal, UIScreen.main.bounds.size.width / 11)
                 
                 Text(regestrationTitle)
                     .font(mulishBlackFont)
-                    .padding(.horizontal, UIScreen.main.bounds.size.width / 10)
+                    .padding(.horizontal, UIScreen.main.bounds.size.width / 11)
             }
             
             ZStack{
