@@ -6,49 +6,56 @@ struct LoginWindowView: View {
     
     
     var body: some View {
-        VStack{
-            HStack(){
-                Text(loginTitle)
-                    .font(mulishBlackFont)
-                    .padding(.horizontal, UIScreen.main.bounds.size.width / 11)
-                
-                Text(regestrationTitle)
-                    .font(mulishBlackFont)
-                    .padding(.horizontal, UIScreen.main.bounds.size.width / 11)
-            }
-            
-            ZStack{
-                Image(vector)
-                HStack{
-                    
-                    Image(activeIndicator)
-                    Spacer()
-                }
-            }
-            
-            
+        GeometryReader { geometry in
             VStack{
-                TextFieldLogin(title: emailTitle, userName: username)
-                    .font(mulishFont)
-                    .colorScheme(.light)
+                HStack(){
+                    Text(loginTitle)
+                        .font(mulishBlackFont)
+                        .padding(.horizontal, geometry.size.width / 11)
+                    
+                    Text(regestrationTitle)
+                        .font(mulishBlackFont)
+                        .padding(.horizontal, geometry.size.width / 11)
+                }
+                
+                ZStack{
+                    Image(vector)
+                    HStack{
+                        
+                        Image(activeIndicator)
+                        Spacer()
+                    }
+                }
                 
                 
-                TextFieldLogin(title: passwordTitle, userName: pathword)
-                    .font(mulishFont)
-                    .colorScheme(.light)
+                VStack{
+                    TextFieldLogin(title: emailTitle, userName: username)
+                        .font(mulishFont)
+                        .colorScheme(.light)
+                    
+                    
+                    TextFieldLogin(title: passwordTitle, userName: pathword)
+                        .font(mulishFont)
+                        .colorScheme(.light)
+                    
+                }
+                .padding(.vertical)
+                
+                
+                Button("") {
+                   
+                }
+                
+                .buttonStyle(BlueButton(text: loginHereTitle, imageTitle: powTitle))
+                
+                
+                Text(forgetPasswordTitle)
+                    .font(mulishRusFont)
+                    .padding(.vertical, geometry.size.width / 12)
                 
             }
-            .padding(.vertical)
-            
-            Image(fullButtonTitle)
-                .padding()
-            
-            Text(forgetPasswordTitle)
-                .font(mulishRusFont)
-                .padding(.vertical, UIScreen.main.bounds.size.width / 12)
-            
+            .padding()
         }
-        .padding()
     }
 }
 struct LoginWindowView_Previews: PreviewProvider {

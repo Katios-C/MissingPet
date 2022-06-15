@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		955745952859CBC500A51D18 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 955745942859A03900A51D18 /* Poppins-Regular.ttf */; };
+		955745982859E29900A51D18 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955745972859E29900A51D18 /* ButtonView.swift */; };
 		959575CD28584B810057FFFF /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95D2527D2851F252000FE477 /* Mulish-Regular.ttf */; };
 		959575CF285895C90057FFFF /* Mulish-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 959575CE285895C20057FFFF /* Mulish-Black.ttf */; };
 		95D252672851DF15000FE477 /* MissingPetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D252662851DF15000FE477 /* MissingPetApp.swift */; };
@@ -22,8 +24,8 @@
 
 /* Begin PBXFileReference section */
 		955745942859A03900A51D18 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		955745972859E29900A51D18 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		959575CE285895C20057FFFF /* Mulish-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Black.ttf"; sourceTree = "<group>"; };
-		959575D0285896450057FFFF /* Mulish-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Bold.ttf"; sourceTree = "<group>"; };
 		95D252632851DF15000FE477 /* MissingPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MissingPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D252662851DF15000FE477 /* MissingPetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingPetApp.swift; sourceTree = "<group>"; };
 		95D252682851DF15000FE477 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,7 +57,6 @@
 				95D2527D2851F252000FE477 /* Mulish-Regular.ttf */,
 				955745942859A03900A51D18 /* Poppins-Regular.ttf */,
 				959575CE285895C20057FFFF /* Mulish-Black.ttf */,
-				959575D0285896450057FFFF /* Mulish-Bold.ttf */,
 				95D252742851E4D7000FE477 /* Views */,
 				95D252652851DF15000FE477 /* MissingPet */,
 				95D252642851DF15000FE477 /* Products */,
@@ -105,6 +106,7 @@
 				95D252752851E8BF000FE477 /* LoginView.swift */,
 				95D252812852F7BD000FE477 /* LoginLaterView.swift */,
 				95D2527B2851EBA2000FE477 /* LoginWindowView.swift */,
+				955745972859E29900A51D18 /* ButtonView.swift */,
 				95D25285285307BB000FE477 /* TextFieldLogin.swift */,
 			);
 			path = Login;
@@ -180,6 +182,7 @@
 				959575CD28584B810057FFFF /* Mulish-Regular.ttf in Resources */,
 				959575CF285895C90057FFFF /* Mulish-Black.ttf in Resources */,
 				95D2526B2851DF16000FE477 /* Assets.xcassets in Resources */,
+				955745952859CBC500A51D18 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +195,7 @@
 			files = (
 				95D252762851E8BF000FE477 /* LoginView.swift in Sources */,
 				95D252692851DF15000FE477 /* ContentView.swift in Sources */,
+				955745982859E29900A51D18 /* ButtonView.swift in Sources */,
 				95D252822852F7BD000FE477 /* LoginLaterView.swift in Sources */,
 				95D2527C2851EBA2000FE477 /* LoginWindowView.swift in Sources */,
 				95D25286285307BB000FE477 /* TextFieldLogin.swift in Sources */,

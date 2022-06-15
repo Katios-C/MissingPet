@@ -1,4 +1,3 @@
-
 import SwiftUI
 
 struct TextFieldLogin: View {
@@ -7,12 +6,12 @@ struct TextFieldLogin: View {
     
     var body: some View {
         TextField(title, text: $userName)
-                     .padding()
-                     .background(Color.white)
-                     .cornerRadius(5.0)
-                     .padding(.vertical, 10)
-                     .shadow(radius: 3)
-                     
+            .padding()
+            .background(Color.white)
+            .cornerRadius(5.0)
+            .padding(.vertical, 10)
+            .shadow(radius: 3)
+        
     }
 }
 

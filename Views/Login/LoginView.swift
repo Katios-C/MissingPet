@@ -2,17 +2,18 @@ import SwiftUI
 
 struct LoginView: View {
     var body: some View {
-        VStack {
-            Image(homeTopImage)
-                .padding(.bottom, UIScreen.main.bounds.size.width / 18)
-            LoginWindowView()
-                .padding(.vertical)
-            Spacer()
-            LoginLaterView()
-                .padding(.bottom, UIScreen.main.bounds.size.width / 10)
+        GeometryReader{ geometry in
+            VStack {
+                Image(homeTopImage)
+                    .padding(.bottom, geometry.size.width / 18)
+                LoginWindowView()
+                    .padding(.vertical)
+                Spacer()
+                LoginLaterView()
+                    .padding(.bottom, geometry.size.width / 18)
+            }
+            .padding()
         }
-        .padding()
-        .padding(.top, 30)
     }
 }
 
