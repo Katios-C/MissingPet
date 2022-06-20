@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct BlueButton: ButtonStyle {
+struct LoginBlueButton: ButtonStyle {
     var text: String
     var imageTitle: String
     func makeBody(configuration: Configuration) -> some View {
