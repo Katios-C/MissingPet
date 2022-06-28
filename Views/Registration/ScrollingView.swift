@@ -2,18 +2,18 @@ import SwiftUI
 
 struct ScrollingView: View {
     @Binding var isLoginPressed: Bool
-    
+
     var body: some View {
-        
-        VStack{
-            HStack{
+
+        VStack {
+            HStack {
                 Text(loginTitle)
                     .font(mulishBlackFont)
                     .padding(.horizontal, 25)
                     .onTapGesture {
                         isLoginPressed = true
                     }
-                
+
                 Spacer()
                 Text(regestrationTitle)
                     .font(mulishBlackFont)
@@ -22,12 +22,12 @@ struct ScrollingView: View {
                         isLoginPressed = false
                     }
             }
-            
-            ZStack{
+
+            ZStack {
                 Image(vector)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                HStack{
+                HStack {
                     isLoginPressed ?
                     nil : Spacer()
                     Image(activeIndicator)

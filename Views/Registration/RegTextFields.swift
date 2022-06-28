@@ -1,26 +1,26 @@
 import SwiftUI
 
 struct RegTextFields: View {
-    
+
     @State var nameString: String
     @State var emailString: String
     @State var pathString: String
     @State var repeatPathString: String
-    
+
     @State var isEmailWrong = false
-    @State var FalseToggle = false
+    @State var falseToggle = false
     var body: some View {
-        
-        VStack{
-            TextFieldUnified(title: nameTitle, userInfo: nameString, isEmailWrong: $FalseToggle)
-            
-            VStack{
+
+        VStack {
+            TextFieldUnified(title: nameTitle, userInfo: nameString, isEmailWrong: $falseToggle)
+
+            VStack {
                 TextFieldUnified(title: emailTitle, userInfo: emailString, isEmailWrong: $isEmailWrong)
                     .onTapGesture {
                         isEmailWrong.toggle()
                     }
                     .overlay(
-                        HStack{
+                        HStack {
                             Text(cannotBeBlank)
                                 .font(mulishFontSmall)
                                 .foregroundColor(.red)
@@ -28,18 +28,17 @@ struct RegTextFields: View {
                                 .opacity(isEmailWrong ? 10 : 0)
                                 .position(x: 100, y: 80)
                         })
-                
+
             }
-            TextFieldUnified(title: passwordTitle, userInfo: pathString, isEmailWrong: $FalseToggle)
+            TextFieldUnified(title: passwordTitle, userInfo: pathString, isEmailWrong: $falseToggle)
                 .overlay(
                     EyeView()
                 )
-            TextFieldUnified(title: repeatPathTitle, userInfo: repeatPathString, isEmailWrong: $FalseToggle)
+            TextFieldUnified(title: repeatPathTitle, userInfo: repeatPathString, isEmailWrong: $falseToggle)
                 .overlay(
                     EyeView()
                 )
         }
-        
         .padding()
     }
 }

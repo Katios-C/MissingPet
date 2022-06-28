@@ -2,12 +2,11 @@ import SwiftUI
 
 struct EyeView: View {
     var body: some View {
-        HStack{
+        HStack {
             Spacer()
         Image("eye")
         }
             .padding(.trailing, 10)
-        
     }
 }
 

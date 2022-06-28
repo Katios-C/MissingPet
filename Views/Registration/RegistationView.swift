@@ -5,11 +5,10 @@ struct RegistationView: View {
     @State var email = ""
     @State var path = ""
     @State var repeatPath = ""
-    
+
     var body: some View {
-        
-        VStack{
-            
+
+        VStack {
             RegTextFields(nameString: name, emailString: email, pathString: path, repeatPathString: repeatPath)
             Button("") {
             }
@@ -19,7 +18,6 @@ struct RegistationView: View {
         .padding()
     }
 }
-
 
 struct RegistationView_Previews: PreviewProvider {
     static var previews: some View {

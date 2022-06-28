@@ -13,7 +13,6 @@ let nameTitle = "Имя"
 let repeatPathTitle = "Повторите пароль"
 let cannotBeBlank = "Это поле не должно быть пустым"
 
-
 // Image titles
 let homeTopImage = "HomeTop"
 let rightArrow = "rightArrow"
@@ -21,7 +20,6 @@ let vector = "Vector"
 let activeIndicator = "Active_indicator"
 let fullButtonTitle = "fullButton"
 let powTitle = "pow"
-
 
 // Colors
 

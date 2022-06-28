@@ -1,14 +1,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    
+
     @State var isLoginPress = false
     var body: some View {
-        VStack{
+        VStack {
             Image(homeTopImage)
             ScrollingView(isLoginPressed: $isLoginPress)
-            
+
             if isLoginPress == true {
                 LoginWindowView()
             } else {

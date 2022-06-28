@@ -5,15 +5,15 @@ struct LoginWindowView: View {
     @State var pathword: String = ""
     @State var isPathNil = false
     @State var falseToggle = false
-    
+
     var body: some View {
-        
-        VStack{
-            VStack{
+
+        VStack {
+            VStack {
                 TextFieldUnified(title: emailTitle, userInfo: username, isEmailWrong: $falseToggle)
                     .font(mulishFont)
                     .colorScheme(.light)
-                VStack(alignment: .leading){
+                VStack(alignment: .leading) {
                     TextFieldUnified(title: passwordTitle, userInfo: pathword, isEmailWrong: $isPathNil)
                         .font(mulishFont)
                         .colorScheme(.light)
@@ -29,12 +29,11 @@ struct LoginWindowView: View {
                 }
             }
             .padding()
-            
-            
+
             Button("") {
             }
             .buttonStyle(LoginBlueButton(text: loginHereTitle, imageTitle: powTitle))
-            
+
             Text(forgetPasswordTitle)
                 .font(mulishRusFont)
                 .padding(.vertical, 30)

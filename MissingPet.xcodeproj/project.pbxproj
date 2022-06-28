@@ -14,6 +14,7 @@
 		95605DE4285C25640083EC0E /* RegistationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95605DE3285C25640083EC0E /* RegistationView.swift */; };
 		95605DE6285C27680083EC0E /* ScrollingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95605DE5285C27680083EC0E /* ScrollingView.swift */; };
 		95605DE8285C296B0083EC0E /* RegTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95605DE7285C296B0083EC0E /* RegTextFields.swift */; };
+		957A3E11286AE41B00866B78 /*  .swiflint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 957A3E10286AE41B00866B78 /*  .swiflint.yml */; };
 		959575CF285895C90057FFFF /* Mulish-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 959575CE285895C20057FFFF /* Mulish-Black.ttf */; };
 		95D252672851DF15000FE477 /* MissingPetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D252662851DF15000FE477 /* MissingPetApp.swift */; };
 		95D252692851DF15000FE477 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D252682851DF15000FE477 /* ContentView.swift */; };
@@ -33,6 +34,7 @@
 		95605DE3285C25640083EC0E /* RegistationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistationView.swift; sourceTree = "<group>"; };
 		95605DE5285C27680083EC0E /* ScrollingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingView.swift; sourceTree = "<group>"; };
 		95605DE7285C296B0083EC0E /* RegTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegTextFields.swift; sourceTree = "<group>"; };
+		957A3E10286AE41B00866B78 /*  .swiflint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = " .swiflint.yml"; sourceTree = "<group>"; };
 		959575CE285895C20057FFFF /* Mulish-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Black.ttf"; sourceTree = "<group>"; };
 		95D252632851DF15000FE477 /* MissingPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MissingPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D252662851DF15000FE477 /* MissingPetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingPetApp.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		95D2525A2851DF15000FE477 = {
 			isa = PBXGroup;
 			children = (
+				957A3E10286AE41B00866B78 /*  .swiflint.yml */,
 				95419443286AA5880094C9E0 /* Mulish-Regular.ttf */,
 				955745942859A03900A51D18 /* Poppins-Regular.ttf */,
 				959575CE285895C20057FFFF /* Mulish-Black.ttf */,
@@ -147,12 +150,15 @@
 				95D2525F2851DF15000FE477 /* Sources */,
 				95D252602851DF15000FE477 /* Frameworks */,
 				95D252612851DF15000FE477 /* Resources */,
+				957A3E08286ACBD900866B78 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MissingPet;
+			packageProductDependencies = (
+			);
 			productName = MissingPet;
 			productReference = 95D252632851DF15000FE477 /* MissingPet.app */;
 			productType = "com.apple.product-type.application";
@@ -181,6 +187,8 @@
 				Base,
 			);
 			mainGroup = 95D2525A2851DF15000FE477;
+			packageReferences = (
+			);
 			productRefGroup = 95D252642851DF15000FE477 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -199,11 +207,32 @@
 				959575CF285895C90057FFFF /* Mulish-Black.ttf in Resources */,
 				95D2526B2851DF16000FE477 /* Assets.xcassets in Resources */,
 				955745952859CBC500A51D18 /* Poppins-Regular.ttf in Resources */,
+				957A3E11286AE41B00866B78 /*  .swiflint.yml in Resources */,
 				95419444286AA5880094C9E0 /* Mulish-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		957A3E08286ACBD900866B78 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		95D2525F2851DF15000FE477 /* Sources */ = {
