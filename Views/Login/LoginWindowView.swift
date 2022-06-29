@@ -1,25 +1,27 @@
 import SwiftUI
+import Resolver
 
 struct LoginWindowView: View {
-    @State var username: String = ""
-    @State var pathword: String = ""
+   // @State var username: String = ""
+  //  @State var pathword: String = ""
     @State var isPathNil = false
     @State var falseToggle = false
 
+    @ObservedObject var loginRegistration: LoginRegistration = Resolver.resolve()
     var body: some View {
 
         VStack {
             VStack {
-                TextFieldUnified(title: emailTitle, userInfo: username, isEmailWrong: $falseToggle)
+                TextFieldUnified(title: emailTitle, userInfo: $loginRegistration.emailString, isEmailWrong: falseToggle)
+                    .disableAutocorrection(true)
                     .font(mulishFont)
                     .colorScheme(.light)
                 VStack(alignment: .leading) {
-                    TextFieldUnified(title: passwordTitle, userInfo: pathword, isEmailWrong: $isPathNil)
+                    TextFieldUnified(title: passwordTitle, userInfo: $loginRegistration.pathString, isEmailWrong: loginRegistration.pathValidated())
+                        .disableAutocorrection(true)
                         .font(mulishFont)
                         .colorScheme(.light)
-                        .onTapGesture {
-                            isPathNil.toggle()
-                        }
+                        
                         .overlay(EyeView())
                     Text(cannotBeBlank)
                         .font(mulishFontSmall)
@@ -27,10 +29,12 @@ struct LoginWindowView: View {
                         .padding(.top, -12)
                         .opacity(isPathNil ? 10 : 0)
                 }
+
             }
             .padding()
 
             Button("") {
+                print(loginRegistration.checkLogin())
             }
             .buttonStyle(LoginBlueButton(text: loginHereTitle, imageTitle: powTitle))
 

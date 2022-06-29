@@ -12,13 +12,13 @@ struct RegTextFields: View {
     var body: some View {
 
         VStack {
-            TextFieldUnified(title: nameTitle, userInfo: nameString, isEmailWrong: $falseToggle)
+            TextFieldUnified(title: nameTitle, userInfo: $nameString, isEmailWrong: falseToggle)
 
             VStack {
-                TextFieldUnified(title: emailTitle, userInfo: emailString, isEmailWrong: $isEmailWrong)
-                    .onTapGesture {
-                        isEmailWrong.toggle()
-                    }
+                TextFieldUnified(title: emailTitle, userInfo: $emailString, isEmailWrong: isEmailWrong)
+//                    .onTapGesture {
+//                        isEmailWrong.toggle()
+//                    }
                     .overlay(
                         HStack {
                             Text(cannotBeBlank)
@@ -30,11 +30,11 @@ struct RegTextFields: View {
                         })
 
             }
-            TextFieldUnified(title: passwordTitle, userInfo: pathString, isEmailWrong: $falseToggle)
+            TextFieldUnified(title: passwordTitle, userInfo: $pathString, isEmailWrong: falseToggle)
                 .overlay(
                     EyeView()
                 )
-            TextFieldUnified(title: repeatPathTitle, userInfo: repeatPathString, isEmailWrong: $falseToggle)
+            TextFieldUnified(title: repeatPathTitle, userInfo: $repeatPathString, isEmailWrong: falseToggle)
                 .overlay(
                     EyeView()
                 )

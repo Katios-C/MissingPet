@@ -2,8 +2,8 @@ import SwiftUI
 
 struct TextFieldUnified: View {
     @State var title: String
-    @State var userInfo: String
-    @Binding var isEmailWrong: Bool
+    @Binding var userInfo: String
+    @State var isEmailWrong: Bool
 
     var body: some View {
         TextField(title, text: $userInfo)

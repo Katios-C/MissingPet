@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		952E6915286C366100E4F6B8 /* ExtensionsString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952E6914286C366100E4F6B8 /* ExtensionsString.swift */; };
 		95419444286AA5880094C9E0 /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95419443286AA5880094C9E0 /* Mulish-Regular.ttf */; };
 		954DFC652860371F00A25ED5 /* EyeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954DFC642860371F00A25ED5 /* EyeView.swift */; };
 		955745952859CBC500A51D18 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 955745942859A03900A51D18 /* Poppins-Regular.ttf */; };
@@ -15,6 +16,9 @@
 		95605DE6285C27680083EC0E /* ScrollingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95605DE5285C27680083EC0E /* ScrollingView.swift */; };
 		95605DE8285C296B0083EC0E /* RegTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95605DE7285C296B0083EC0E /* RegTextFields.swift */; };
 		957A3E11286AE41B00866B78 /*  .swiflint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 957A3E10286AE41B00866B78 /*  .swiflint.yml */; };
+		957A3E18286C1CBF00866B78 /* ResolverRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957A3E17286C1CBF00866B78 /* ResolverRegister.swift */; };
+		957A3E1B286C21C800866B78 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 957A3E1A286C21C800866B78 /* Resolver */; };
+		957A3E1D286C25EE00866B78 /* LoginRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957A3E1C286C25EE00866B78 /* LoginRegistration.swift */; };
 		959575CF285895C90057FFFF /* Mulish-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 959575CE285895C20057FFFF /* Mulish-Black.ttf */; };
 		95D252672851DF15000FE477 /* MissingPetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D252662851DF15000FE477 /* MissingPetApp.swift */; };
 		95D252692851DF15000FE477 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D252682851DF15000FE477 /* ContentView.swift */; };
@@ -27,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		952E6914286C366100E4F6B8 /* ExtensionsString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsString.swift; sourceTree = "<group>"; };
 		95419443286AA5880094C9E0 /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
 		954DFC642860371F00A25ED5 /* EyeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeView.swift; sourceTree = "<group>"; };
 		955745942859A03900A51D18 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
@@ -35,6 +40,8 @@
 		95605DE5285C27680083EC0E /* ScrollingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingView.swift; sourceTree = "<group>"; };
 		95605DE7285C296B0083EC0E /* RegTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegTextFields.swift; sourceTree = "<group>"; };
 		957A3E10286AE41B00866B78 /*  .swiflint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = " .swiflint.yml"; sourceTree = "<group>"; };
+		957A3E17286C1CBF00866B78 /* ResolverRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverRegister.swift; sourceTree = "<group>"; };
+		957A3E1C286C25EE00866B78 /* LoginRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegistration.swift; sourceTree = "<group>"; };
 		959575CE285895C20057FFFF /* Mulish-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Black.ttf"; sourceTree = "<group>"; };
 		95D252632851DF15000FE477 /* MissingPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MissingPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D252662851DF15000FE477 /* MissingPetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingPetApp.swift; sourceTree = "<group>"; };
@@ -53,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				957A3E1B286C21C800866B78 /* Resolver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,8 +73,18 @@
 				95605DE3285C25640083EC0E /* RegistationView.swift */,
 				95605DE5285C27680083EC0E /* ScrollingView.swift */,
 				95605DE7285C296B0083EC0E /* RegTextFields.swift */,
+				957A3E1C286C25EE00866B78 /* LoginRegistration.swift */,
 			);
 			path = Registration;
+			sourceTree = "<group>";
+		};
+		957A3E16286C1CA600866B78 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				957A3E17286C1CBF00866B78 /* ResolverRegister.swift */,
+				952E6914286C366100E4F6B8 /* ExtensionsString.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 		95D2525A2851DF15000FE477 = {
@@ -76,6 +94,7 @@
 				95419443286AA5880094C9E0 /* Mulish-Regular.ttf */,
 				955745942859A03900A51D18 /* Poppins-Regular.ttf */,
 				959575CE285895C20057FFFF /* Mulish-Black.ttf */,
+				957A3E16286C1CA600866B78 /* DI */,
 				95D252742851E4D7000FE477 /* Views */,
 				95D252652851DF15000FE477 /* MissingPet */,
 				95D252642851DF15000FE477 /* Products */,
@@ -158,6 +177,7 @@
 			);
 			name = MissingPet;
 			packageProductDependencies = (
+				957A3E1A286C21C800866B78 /* Resolver */,
 			);
 			productName = MissingPet;
 			productReference = 95D252632851DF15000FE477 /* MissingPet.app */;
@@ -188,6 +208,7 @@
 			);
 			mainGroup = 95D2525A2851DF15000FE477;
 			packageReferences = (
+				957A3E19286C21C800866B78 /* XCRemoteSwiftPackageReference "Resolver" */,
 			);
 			productRefGroup = 95D252642851DF15000FE477 /* Products */;
 			projectDirPath = "";
@@ -239,10 +260,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				957A3E1D286C25EE00866B78 /* LoginRegistration.swift in Sources */,
 				95D252692851DF15000FE477 /* ContentView.swift in Sources */,
 				95605DE6285C27680083EC0E /* ScrollingView.swift in Sources */,
 				955745982859E29900A51D18 /* LoginBlueButton.swift in Sources */,
 				95605DE8285C296B0083EC0E /* RegTextFields.swift in Sources */,
+				957A3E18286C1CBF00866B78 /* ResolverRegister.swift in Sources */,
+				952E6915286C366100E4F6B8 /* ExtensionsString.swift in Sources */,
 				95D252822852F7BD000FE477 /* LoginLaterView.swift in Sources */,
 				95D2527C2851EBA2000FE477 /* LoginWindowView.swift in Sources */,
 				95D25286285307BB000FE477 /* TextFieldUnified.swift in Sources */,
@@ -454,6 +478,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		957A3E19286C21C800866B78 /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		957A3E1A286C21C800866B78 /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 957A3E19286C21C800866B78 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 95D2525B2851DF15000FE477 /* Project object */;
 }

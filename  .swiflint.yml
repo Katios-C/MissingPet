@@ -2,7 +2,9 @@ disabled_rules: # rule identifiers to exclude from running
   - variable_name
   - nesting
   - function_parameter_count
+  - trailing_whitespace 
 opt_in_rules: # some rules are only opt-in
+  - conditional_returns_on_newline
   - control_statement
   - empty_count
   - trailing_newline
