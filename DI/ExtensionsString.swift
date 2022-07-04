@@ -7,7 +7,7 @@ extension String {
         return NSPredicate(format: "SELF MATCHES %@", emailRegEx).evaluate(with: self)
     }
 
-    func isPath() -> Bool {
+    func isNotEmpty() -> Bool {
         let emailRegEx = "^[a-zA-Z0-9]{1,}$"
         return NSPredicate(format: "SELF MATCHES %@", emailRegEx).evaluate(with: self)
     }

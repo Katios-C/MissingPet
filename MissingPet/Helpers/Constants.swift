@@ -11,7 +11,10 @@ let loginHereTitle = "Войти"
 let regNowTitle = "Зарегестрироваться"
 let nameTitle = "Имя"
 let repeatPathTitle = "Повторите пароль"
-let cannotBeBlank = "Это поле не должно быть пустым"
+let cannotBeBlank = "Поле не должно быть пустым"
+let wrongEmailFormat = "Неверный формат email. Пример: name@gmail.com"
+let passAndEmailNotMatchString = "Неверная комбинация email адреса и пароля"
+let notMatchPass = "Не совпадает с введенным паролем"
 
 // Image titles
 let homeTopImage = "HomeTop"

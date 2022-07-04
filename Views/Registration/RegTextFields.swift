@@ -1,50 +1,92 @@
 import SwiftUI
+import Resolver
 
 struct RegTextFields: View {
 
-    @State var nameString: String
-    @State var emailString: String
-    @State var pathString: String
-    @State var repeatPathString: String
-
-    @State var isEmailWrong = false
-    @State var falseToggle = false
+    @Binding var nameString: String
+    @Binding var emailString: String
+    @Binding var pathString: String
+    @Binding var repeatPathString: String
+    @Binding var isNameEmpty: Bool
+    @Binding var isEmailWrong: Bool
+    @Binding var isPassEmpty: Bool
+    @Binding var isPassMatch: Bool
+    @ObservedObject var loginRegistration: LoginRegistration = Resolver.resolve()
+   // @State var falseToggle = false
     var body: some View {
 
-        VStack {
-            TextFieldUnified(title: nameTitle, userInfo: $nameString, isEmailWrong: falseToggle)
-
+        VStack() {
             VStack {
-                TextFieldUnified(title: emailTitle, userInfo: $emailString, isEmailWrong: isEmailWrong)
-//                    .onTapGesture {
-//                        isEmailWrong.toggle()
-//                    }
-                    .overlay(
-                        HStack {
-                            Text(cannotBeBlank)
-                                .font(mulishFontSmall)
-                                .foregroundColor(.red)
-                                .padding(.top, -12)
-                                .opacity(isEmailWrong ? 10 : 0)
-                                .position(x: 100, y: 80)
-                        })
+                TextFieldUnified(title: nameTitle, userInfo: $nameString)
+                    .onTapGesture {
+                        isNameEmpty = false
+                    }
+            HStack {
+                Text(cannotBeBlank)
+                    .font(mulishFontSmall)
+                    .foregroundColor(.red)
+                    .opacity(isNameEmpty ? 10 : 0)
 
+                Spacer()
             }
-            TextFieldUnified(title: passwordTitle, userInfo: $pathString, isEmailWrong: falseToggle)
+            }
+          //  .padding()
+            VStack {
+                TextFieldUnified(title: emailTitle, userInfo: $emailString)
+                    .onTapGesture {
+                        isEmailWrong = false
+                    }
+             
+                HStack {
+                    Text(emailString.isEmpty ? cannotBeBlank : wrongEmailFormat)
+                        .font(mulishFontSmall)
+                        .foregroundColor(.red)
+                        .opacity(isEmailWrong ? 10 : 0)
+                    // .padding(.vertical, 15)
+                    Spacer()
+                }
+            }
+         //   .padding()
+            VStack {
+            TextFieldUnified(title: passwordTitle, userInfo: $pathString)
                 .overlay(
                     EyeView()
                 )
-            TextFieldUnified(title: repeatPathTitle, userInfo: $repeatPathString, isEmailWrong: falseToggle)
+                HStack {
+                    Text(cannotBeBlank)
+                        .font(mulishFontSmall)
+                        .foregroundColor(.red)
+                        .opacity(isPassEmpty ? 10 : 0)
+                    // .padding(.vertical, 15)
+                    Spacer()
+                }
+            }
+          //  .padding()
+            VStack {
+            TextFieldUnified(title: repeatPathTitle, userInfo: $repeatPathString)
                 .overlay(
                     EyeView()
                 )
+                .onTapGesture {
+                    isPassMatch = false
+                }
+                HStack {
+                    Text(cannotBeBlank)
+                        .font(mulishFontSmall)
+                        .foregroundColor(.red)
+                        .opacity(isPassMatch ? 10 : 0)
+                    // .padding(.vertical, 15)
+                    Spacer()
+                }
         }
-        .padding()
+           // .padding()
+        }
+       // .padding()
     }
 }
 
-struct RegTextFields_Previews: PreviewProvider {
-    static var previews: some View {
-        RegTextFields(nameString: "", emailString: "", pathString: "", repeatPathString: "")
-    }
-}
+//struct RegTextFields_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RegTextFields(nameString: "", emailString: "", pathString: "", repeatPathString: "", isNameEmpty: false)
+//    }
+//}

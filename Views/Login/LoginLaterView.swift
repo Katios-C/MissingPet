@@ -3,10 +3,8 @@ import SwiftUI
 struct LoginLaterView: View {
     var body: some View {
         HStack {
-            VStack {
-                Text(loginLater)
-                    .font(mulishRusFont)
-            }
+            Text(loginLater)
+                .font(mulishRusFont)
             Image(rightArrow)
         }
     }
